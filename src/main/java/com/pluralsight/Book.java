@@ -1,7 +1,9 @@
+package com.pluralsight;
+
 public class Book {
 
     //add properties
-    int Id;
+    int id;
     String isbn;
     String title;
     boolean isCheckedOut;
@@ -9,8 +11,8 @@ public class Book {
 
     //add constructor
 
-    public Book(int id, String isbn, String title, boolean isCheckedOut, String checkedOutTo) {
-        Id = id;
+    public Book(int id, String isbn, String title) {
+        this.id = id;
         this.isbn = isbn;
         this.title = title;
         this.isCheckedOut = false;
@@ -20,7 +22,7 @@ public class Book {
     //add get/ set
 
     public int getId() {
-        return Id;
+        return id;
     }
 
     public String getIsbn() {
