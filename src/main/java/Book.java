@@ -13,8 +13,8 @@ public class Book {
         Id = id;
         this.isbn = isbn;
         this.title = title;
-        this.isCheckedOut = isCheckedOut;
-        this.checkedOutTo = checkedOutTo;
+        this.isCheckedOut = false;
+        this.checkedOutTo = "";
     }
 
     //add get/ set
@@ -23,43 +23,30 @@ public class Book {
         return Id;
     }
 
-    public void setId(int id) {
-        Id = id;
-    }
-
     public String getIsbn() {
         return isbn;
-    }
-
-    public void setIsbn(String isbn) {
-        this.isbn = isbn;
     }
 
     public String getTitle() {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
     public boolean isCheckedOut() {
         return isCheckedOut;
-    }
-
-    public void setCheckedOut(boolean checkedOut) {
-        isCheckedOut = checkedOut;
     }
 
     public String getCheckedOutTo() {
         return checkedOutTo;
     }
 
-    public void setCheckedOutTo(String checkedOutTo) {
-        this.checkedOutTo = checkedOutTo;
-    }
-
 
     // add methods derived
-
+    public void checkOut (String name){
+        isCheckedOut = true;
+        checkedOutTo = name;
+        }
+    public void checkIn() {
+        isCheckedOut = false;
+        checkedOutTo = "";
+    }
 }
